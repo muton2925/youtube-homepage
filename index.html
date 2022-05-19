@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full font-Roboto">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1000, initial-scale=1">
+    <title>YouTube</title>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body class="h-full bg-gray-50">
+    <header class="w-screen h-14 z-50 fixed flex justify-between items-center px-4 bg-white opacity-98">
+        <div class="flex items-center">
+            <button class="btn-header btn-header-basic"><i class="align-middle material-icons">menu</i></button>
+            <button class="w-24 ml-4"><img src="https://iconape.com/wp-content/png_logo_vector/youtube-premium-logo.png" alt=""></button>
+        </div>
+        <form class="hidden sm:flex flex-custom" action="#" method="POST">
+            <input class="w-full ml-10 px-2.5 border-basic-custom" type="text" placeholder="搜尋">
+            <button class="border-search-custom background-search-custom px-5"><i class="material-icons align-middle">search</i></button>
+            <button class="btn-header btn-header-gray ml-2"><i class="material-icons align-middle">mic</i></button>
+        </form>
+        <div class="min-w-0 sm:hidden flex flex-basis-full justify-end">
+            <button class="btn-header btn-header-basic ml-3"><i class="material-icons align-middle">search</i></button>
+            <button class="btn-header btn-header-basic ml-3"><i class="material-icons align-middle">mic</i></button>
+        </div>
+        <div class="flex justify-end items-center pr-3">
+            <button class="btn-header btn-header-basic ml-3"><i class="material-icons-outlined align-middle">video_call</i></button>
+            <button class="btn-header btn-header-basic ml-3"><i class="material-icons-outlined align-middle">apps</i></button>
+            <button class="btn-header btn-header-basic ml-3"><i class="material-icons-outlined align-middle">notifications</i></button>
+            <button class="btn-header btn-header-basic ml-3"><i class="material-icons-outlined align-middle">account_circle</i></button>
+        </div>
+    </header>
+    <nav class="h-15 z-50 fixed flex flex-shrink justify-center top-14 left-0 md:left-18 xl:left-60 right-0 bg-white opacity-98 border-y shadow-sm overflow-x-auto overflow-y-hidden">
+        <ul class="min-w-0 flex items-center space-x-3 text-sm">
+            <li><button class="btn-nav btn-nav-black ml-6">全部</button></li>
+            <li><button class="btn-nav btn-nav-gray">音樂</button></li>
+            <li><button class="btn-nav btn-nav-gray">合輯</button></li>
+            <li><button class="btn-nav btn-nav-gray">直播中</button></li>
+            <li><button class="btn-nav btn-nav-gray">動畫</button></li>
+            <li><button class="btn-nav btn-nav-gray">烹飪節目</button></li>
+            <li><button class="btn-nav btn-nav-gray">數學</button></li>
+            <li><button class="btn-nav btn-nav-gray">健身</button></li>
+            <li><button class="btn-nav btn-nav-gray">寵物</button></li>
+            <li><button class="btn-nav btn-nav-gray">動作冒險遊戲</button></li>
+            <li><button class="btn-nav btn-nav-gray">最新上傳</button></li>
+            <li><button class="btn-nav btn-nav-gray mr-6">讓你耳目一新的影片</button></li>
+        </ul>
+    </nav>
+    <aside class="hidden md:block md:w-18 xl:w-60 fixed top-14 bottom-0 xl:pr-2 text-xs bg-white overflow-y-scroll overscroll-contain">
+        <div class="xl:hidden">
+            <button class="btn-aside-outer">
+                <div class="btn-aside">
+                    <i class="material-icons">home</i>
+                    <span>首頁</span>
+                </div>
+            </button>
+            <button class="btn-aside-outer">
+                <div class="btn-aside">
+                    <i class="material-icons-outlined">explore</i>
+                    <span>探索</span>
+                </div>
+            </button>
+            <button class="btn-aside-outer">
+                <div class="btn-aside">
+                    <i class="material-icons-outlined">subscriptions</i>
+                    <span>訂閱內容</span>
+                </div>
+            </button>
+            <button class="btn-aside-outer">
+                <div class="btn-aside">
+                    <i class="material-icons-outlined">video_library</i>
+                    <span>媒體庫</span>
+                </div>
+            </button>
+        </div>
+        <div class="hidden xl:block py-3">
+            <button class="btn-aside-xl-active">
+                <i class="material-icons mr-6">home</i>
+                <span class="text-sm">首頁</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">explore</i>
+                <span class="text-sm">探索</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">subscriptions</i>
+                <span class="text-sm">訂閱內容</span>
+            </button>
+        </div>
+        <div class="hidden xl:block py-3 border-t">
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">video_library</i>
+                <span class="text-sm">媒體庫</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">history</i>
+                <span class="text-sm">觀看記錄</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">slideshow</i>
+                <span class="text-sm">你的影片</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">schedule</i>
+                <span class="text-sm">稍後觀看</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">thumb_up</i>
+                <span class="text-sm">喜歡的影片</span>
+            </button>
+        </div>
+        <div class="hidden xl:block border-t py-2">
+            <h3 class="px-6 py-2 text-sm">訂閱內容</h3>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">music_note</i>
+                <span class="text-sm">音樂</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">emoji_events</i>
+                <span class="text-sm">體育</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">sports_esports</i>
+                <span class="text-sm">遊戲</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">local_movies</i>
+                <span class="text-sm">電影</span>
+            </button>
+        </div>
+        <div class="hidden xl:block border-t py-2">
+            <h3 class="px-6 py-2 text-sm">更多 YOUTUBE 功能</h3>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">smart_display</i>
+                <span class="text-sm">YouTube Premium</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">local_movies</i>
+                <span class="text-sm">電影</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">sports_esports</i>
+                <span class="text-sm">遊戲</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">sensors</i>
+                <span class="text-sm">直播</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">emoji_events</i>
+                <span class="text-sm">體育</span>
+            </button>
+        </div>
+        <div class="hidden xl:block border-t py-2">
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">settings</i>
+                <span class="text-sm">設定</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">flag</i>
+                <span class="text-sm">檢舉記錄</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">help_outline</i>
+                <span class="text-sm">說明</span>
+            </button>
+            <button class="btn-aside-xl">
+                <i class="material-icons-outlined mr-6">feedback</i>
+                <span class="text-sm">提供意見</span>
+            </button>
+        </div>
+        <footer class="hidden xl:block text-13 border-t">
+            <ul class="flex flex-wrap pl-6 pt-4">
+                <li class="mr-2"><a href="#">簡介</a></li>
+                <li class="mr-2"><a href="#">媒體</a></li>
+                <li class="mr-2"><a href="#">版權</a></li>
+                <li class="mr-2"><a href="#">與我們聯絡</a></li>
+                <li class="mr-2"><a href="#">創作者</a></li>
+                <li class="mr-2"><a href="#">廣告</a></li>
+                <li class="mr-2"><a href="#">開發人員</a></li>
+            </ul>
+            <ul class="flex flex-wrap pl-6 pt-4">
+                <li class="mr-2"><a href="#">條款</a></li>
+                <li class="mr-2"><a href="#">隱私權</a></li>
+                <li class="mr-2"><a href="#">政策與安全性</a></li>
+                <li class="mr-2"><a href="#">YouTube 運作方式</a></li>
+                <li class="mr-2"><a href="#">測試新功能</a></li>
+            </ul>
+        </footer>
+        <div class="hidden xl:block px-6 py-4 text-gray-400 font-semibold">© 2021 Google LLC</div>
+    </aside>
+    <div class="grid grid-cols-custom grid-rows-custom h-full">
+        <main class="col-start-2 col-end-3 row-start-3 row-end-4">
+            <div class="w-10/12 grid grid-cols-custom2 gap-x-4 gap-y-6 mt-6 mx-auto">
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="relative">
+                        <img src="thumbnail.jpg">
+                        <button class="film-button top-1.5 right-1.5"><i class="material-icons text-white">schedule</i></button>
+                        <button class="film-button top-9 right-1.5"><i class="material-icons  text-white">queue_music</i></button>
+                        <div class="film-status">4:52</div>
+                    </div>
+                    <div class="flex flex-row mt-3 mb-4">
+                        <img class="film-author-icon" src="peopleIcon.jpg">
+                        <div class="film-caption flex-grow">
+                            <h3 class="film-title">The Season Of Vanilla Bubble / 香草泡泡的季節</h3>
+                            <div class="film-author">V.K 克</div>
+                            <div>
+                                <span>觀看次數 : 1.4萬</span>
+                                <span class="mx-1">‧</span>
+                                <span>5年前</span>
+                            </div>
+                        </div>
+                        <div class="film-option-outer">
+                            <button class="film-option"><i class="material-icons">more_vert</i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<style>
+
+</style>
+</html>
